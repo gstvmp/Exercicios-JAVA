@@ -1,0 +1,35 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		Locale.setDefault(Locale.US);
+		
+		double A, B, C;
+	    double area_Tri, area_Tra, area_Qua, area_Cir, area_Ret;
+        double pi = 3.14159;
+        
+		A = sc.nextDouble();
+		B = sc.nextDouble();
+		C = sc.nextDouble();
+		
+		area_Tri = A * C / 2;
+		area_Cir = C * C * pi;
+		area_Tra = (A + B) * C / 2;
+		area_Qua = B * B;
+		area_Ret = A * B;
+		
+		System.out.printf("TRIANGULO :%.3f%n", area_Tri);
+		System.out.printf("CIRCULO: %.3f%n", area_Cir);
+		System.out.printf("TRAPEZIO: %.3f%n", area_Tra);
+		System.out.printf("QUADRADO: %.3f%n", area_Qua);
+		System.out.printf("RETANGULO: %.3f%n", area_Ret);
+
+
+		
+		sc.close();
+	}
+}
